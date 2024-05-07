@@ -76,6 +76,12 @@ public class SettingFragment extends Fragment {
 
         btn_logout = binding.btnLogout;
 
+        if (shouldShowButton) {
+            myButton.setVisibility(View.VISIBLE);
+        } else {
+            myButton.setVisibility(View.GONE);
+        }
+        
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
