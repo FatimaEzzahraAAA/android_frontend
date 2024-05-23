@@ -40,6 +40,7 @@ public interface AuthService {
     Call<Reservation> reserveTickets(@Body Reservation reservation, @Header("Authorization") String token);
     @GET("users/reservations/user/{userId}")
     Call<List<Reservation>> getReservationsByUserId(@Path("userId") Long userId, @Header("Authorization") String token);
+     Call<List<Reservation>> getPlacesByUserId(@Path("userId") Long userId, @Header("Authorization") String token);
 
 
 }
